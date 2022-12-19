@@ -29,7 +29,7 @@ const getPurchaseById = async ({ params: { id } }, res) => {
       })
       .populate({
         path: "activities",
-        select: "title"
+        select: ["es", "en", "ca"]
       })
       .populate({
         path: "discountApplied"
