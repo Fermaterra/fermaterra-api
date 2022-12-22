@@ -19,7 +19,7 @@ const render = (req, res) => {
 
 const payment = async (req, res) => {
   const request = new paypal.orders.OrdersCreateRequest();
-  const total = req.body.cart.reduce((sum, item) => sum + (item.amount * item.price));
+  const total = req.body.amount;
   request.prefer("return=representation");
   request.requestBody({
     intent: "CAPTURE",
