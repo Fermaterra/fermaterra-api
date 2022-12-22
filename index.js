@@ -38,4 +38,8 @@ const emailRouter = require("./routes/emailRouter");
 
 server.use("/email", emailRouter);
 
+const paymentRouter = require("./routes/paypalRouter");
+
+server.use("/payment", paymentRouter);
+
 server.listen(port, () => { debug(`Server is running on port ${port}`); });
