@@ -1,7 +1,7 @@
 require("dotenv").config();
 const paypal = require("@paypal/checkout-server-sdk");
 
-const Environment = new paypal.core.LiveEnvironment();
+const Environment = paypal.core.LiveEnvironment;
 const client = new paypal.core.PayPalHttpClient(
   new Environment(
     process.env.PAYPAL_CLIENT_ID,
